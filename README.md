@@ -20,9 +20,10 @@ In this project is shown the accuracy calculated with implementation of Naive Ba
 ## Run
 - download [repository](https://github.com/AlessandroSoci/Naive-Bayes-vs-Decision-Tree/archive/master.zip)
 - run *Text-Classification.py*
+
 **IMPORTANT!** the "*Dataset*" folder must be in the same url path of Text-Classification.py.
 
-##Implementation
+## Implementation
 The datasets are reading with the librarie of **Pandas**, that allow to modify in easy-way the whole structure. According to the dataset and to the relative information, some functions are called for changing and adapting it. These functions are very important because they let to do learning better the classificators. Some of these function are:
 - *get_dummies*: convert categorical variable into dummy/indicator variables;
 - *factorize*: Encode input values as an enumerated type or categorical variable;
@@ -42,19 +43,18 @@ To obtain valid and independent results from partitioning in the test set and tr
 
 |    Dataset         |   Naive Bayes    |   Decision Tree   |
 |--------------------|------------------|-------------------|
-| **Iris**           | 95.33 (+/- 3.71) | 94.33 (+/- 4.23)  |
-| **Echocardiogram** | 96.00 (+/- 4.42) | 94.67 (+/- 4.99)  |
-| **Mushroom**       | 99.72 (+/- 0.20) | 100.00 (+/- 0.00) |
-| **Breats**         | 97.96 (+/- 1.30) | 93.21 (+/- 2.31)  |
-| **Credit**         | 84.05 (+/- 4.07) | 80.76 (+/- 4.64)  |
-| **Pima**           | 75.91 (+/- 1.94) | 69.61 (+/- 3.49)  |
-| **Hepatitis**      | 86.43 (+/- 6.74) | 80.71 (+/- 9.20)  |
-| **Wine**           | 96.67 (+/- 2.08) | 88.89 (+/- 5.96)  |
-| **Voting**         | 95.63 (+/- 2.23) | 95.17 (+/- 3.03)  |
-| **Car**            | 84.60 (+/- 1.78) | 96.97 (+/- 0.79)  |
-| **Dermatology**    | 98.92 (+/- 0.81) | 95.00 (+/- 2.10)  |
-| **Glass**          | 83.02 (+/- 3.61) | 97.91 (+/- 1.63)  |
-|--------------------|------------------|-------------------|
+| *Iris*           | 95.33 (+/- 3.71) | 94.33 (+/- 4.23)  |
+| *Echocardiogram* | 96.00 (+/- 4.42) | 94.67 (+/- 4.99)  |
+| *Mushroom*       | 99.72 (+/- 0.20) | 100.00 (+/- 0.00) |
+| *Breats*         | 97.96 (+/- 1.30) | 93.21 (+/- 2.31)  |
+| *Credit*         | 84.05 (+/- 4.07) | 80.76 (+/- 4.64)  |
+| *Pima*           | 75.91 (+/- 1.94) | 69.61 (+/- 3.49)  |
+| *Hepatitis*      | 86.43 (+/- 6.74) | 80.71 (+/- 9.20)  |
+| *Wine*            | 96.67 (+/- 2.08) | 88.89 (+/- 5.96)  |
+| *Voting*         | 95.63 (+/- 2.23) | 95.17 (+/- 3.03)  |
+| *Car*            | 84.60 (+/- 1.78) | 96.97 (+/- 0.79)  |
+| *Dermatology*     | 98.92 (+/- 0.81) | 95.00 (+/- 2.10)  |
+| *Glass*           | 83.02 (+/- 3.61) | 97.91 (+/- 1.63)  |
 | **Average**        | 91.185           | 90.603            |
 
 ## Conclusion
