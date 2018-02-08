@@ -15,7 +15,7 @@ Una volta svolti i passaggi precedenti verrà mostrata una tabella dove la prima
 dataset usato, la seconda e la terza rappresentano le accuracy e varianza rispettivamente 
 ottenute dai classificatori Naive Bayes e Decision Tree.
 
-**IMPORTANTE!** la cartella "Dataset" deve essere presente nella medesima path. 
+**IMPORTANTE!** la cartella "Dataset" deve essere presente nella medesima path di Text-Classification.py. 
 
 
 ## Requisiti
