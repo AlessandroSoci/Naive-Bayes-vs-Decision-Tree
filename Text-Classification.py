@@ -48,6 +48,7 @@ sdf = ["Iris", "Echocardiogram", "Mushroom", "Breats", "Credit", "Pima", "Hepati
 # np.set_printoptions(threshold=np.nan)
 imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
 cv = ShuffleSplit(n_splits=10, test_size=0.2, random_state=8)
+min_max_scaler = preprocessing.MinMaxScaler()
 
 # --------------------- Iris -------------------------
 dataset_iris = pd.read_csv('Dataset/Iris.csv')
@@ -133,7 +134,6 @@ Y_hepa = D_hepa[:, 0].astype(np.float)
 # -------------------- Wine --------------------------
 dataset_wine = pd.read_csv('Dataset/Wine.csv')
 values_tmp = dataset_wine.values
-min_max_scaler = preprocessing.MinMaxScaler()
 norm = min_max_scaler.fit_transform(values_tmp)
 dataset_wine = pd.DataFrame(norm)
 dataset_wine.columns = ['label', 'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'f11', 'f12', 'f13']
