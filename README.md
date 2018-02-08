@@ -24,7 +24,7 @@ In this project is shown the accuracy calculated with implementation of Naive Ba
 **IMPORTANT!** the "*Dataset*" folder must be in the same url path of Text-Classification.py.
 
 ## Implementation
-The datasets are reading with the librarie of **Pandas**, that allow to modify in easy-way the whole structure. According to the dataset and to the relative information, some functions are called for changing and adapting it. These functions are very important because they let to do learning better the classificators. Some of these function are:
+The datasets are reading with the librarie of [**Pandas**](https://pandas.pydata.org/), that allow to modify in easy-way the whole structure. According to the dataset and to the relative information, some functions are called for changing and adapting it. These functions are very important because they let to do learning better the classificators. Some of these function are:
 - *get_dummies*: convert categorical variable into dummy/indicator variables;
 - *factorize*: Encode input values as an enumerated type or categorical variable;
 - *drop*: Return new object with labels in requested axis removed;
