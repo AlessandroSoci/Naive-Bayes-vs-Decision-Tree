@@ -7,7 +7,7 @@ In questo progetto viene mostratata l'accuracy calcolata con le implementazioni
  
 ## Esecuzione
 - scaricare l'intero progetto [da questo link](https://github.com/AlessandroSoci/Naive-Bayes-vs-Decision-Tree/archive/master.zip).
-
+- estrarre il contenuto del file zip
 - eseguire il file Text-Classification.py da terminale oppure da una IDE
 come *PyCharm*.
 
