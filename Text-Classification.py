@@ -47,7 +47,7 @@ sdf = ["Iris", "Echocardiogram", "Mushroom", "Breats", "Credit", "Pima", "Hepati
 
 # np.set_printoptions(threshold=np.nan)
 imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
-cv = ShuffleSplit(n_splits=10, test_size=0.2, random_state=8)
+cv = ShuffleSplit(n_splits=10, test_size=0.1, random_state=8)
 min_max_scaler = preprocessing.MinMaxScaler()
 
 # --------------------- Iris -------------------------

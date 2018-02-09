@@ -1,9 +1,9 @@
 # Text Classification
 
 ## Introduction
-In this project is shown the accuracy calculated with implementation of Naive Bayes and of Decision Tree powered by [Scikit-learn](http://scikit-learn.org/stable/), in order to compare the classification algorithms.
+In this project is shown the accuracy calculated with an implementation of Naive Bayes and of Decision Tree powered by [Scikit-learn](http://scikit-learn.org/stable/), in order to compare the classification algorithms.
 ### Dataset
-12 Dataset are used, downloaded from [UCI repository](https://archive.ics.uci.edu/ml/datasets.html) and saved in .csv format. They are:
+12 Datasets were used, downloaded from [UCI repository](https://archive.ics.uci.edu/ml/datasets.html) and saved in .csv format. They are:
 - Iris
 - Echocardiogram
 - Mushroom
@@ -21,13 +21,13 @@ In this project is shown the accuracy calculated with implementation of Naive Ba
 - download [repository](https://github.com/AlessandroSoci/Naive-Bayes-vs-Decision-Tree/archive/master.zip)
 - run *Text-Classification.py*
 
-**IMPORTANT!** the "*Dataset*" folder must be in the same url path of Text-Classification.py.
+**NOTE**: The "*Dataset*" folder must be in the same url path of Text-Classification.py.
 
 ## Implementation
-The datasets are reading with the librarie of [**Pandas**](https://pandas.pydata.org/), that allow to modify in easy-way the whole structure. According to the dataset and to the relative information, some functions are called for changing and adapting it. These functions are very important because they let to do learning better the classificators. Some of these function are:
+The datasets are reading with the librarie of [**Pandas**](https://pandas.pydata.org/), that allow to modify in easy way the whole structure. According to the dataset and to the relative information, some functions are called for changing and adapting it. These functions are very important because they allow to improve the permormances of classificators. Some of these function are:
 - *get_dummies*: convert categorical variable into dummy/indicator variables;
-- *factorize*: Encode input values as an enumerated type or categorical variable;
-- *drop*: Return new object with labels in requested axis removed;
+- *factorize*: encode input values as an enumerated type or categorical variable;
+- *drop*: return new object with labels in requested axis removed;
 
 Furthermore in some case the continuos values are normalized.
 
@@ -37,7 +37,7 @@ In some dataset there are unknown values denotated with '?'. The following strat
 
 The *Imputer* class of Scikit-learn is used to replace with the mean value.
 
-To obtain valid and independent results from partitioning in the test set and training set, the shuffle split is used as **Cross-Validation**. Specifically, a 10-fold cross validation is used, ie the dataset is divided into 10 subsets, and in my case, 8 of them used as a training set and 2 as a test set. The accuracy will then be given by an average of all possible combinations of the partitioning of the dataset.
+To obtain results valid and independent from partitioning betweem the test set and training set, the shuffle split is used as **Cross-Validation**. Specifically, a 10-fold cross validation is used, ie the dataset is divided into 10 subsets, and in my case, 9 of them used as a training set and 1 as a test set. So the accuracy will be given by an average of all possible combinations of the partitioning of the dataset.
 
 ## Results
 
@@ -58,7 +58,7 @@ To obtain valid and independent results from partitioning in the test set and tr
 | **Average**        | 91.185           | 90.603            |
 
 ## Conclusion
-At the end of this study it is possible to conclude that the average accuracy on these specific datasets is slightly higher with Naive Bayes implementation, compared to Decision Tree. But it's not possible to declare if one is better than another.
+At the end of this study it is possible to conclude that the average accuracy on these specific datasets and on this particular shuffle split is slightly higher with Naive Bayes implementation, compared to Decision Tree. So it isn't possible to declare if one is better than another.
 
 
 ## Requirements
