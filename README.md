@@ -2,7 +2,7 @@
 
 ## Run
 - download the [repository](https://github.com/AlessandroSoci/Naive-Bayes-vs-Decision-Tree/archive/master.zip) (clone or zip download)
-- run `Text-Classification.py`
+- run `Test-Classification.py`
 
 The script will output the results for each dataset and will create a table for better reading.
 
