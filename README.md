@@ -1,4 +1,4 @@
-# Text Classification
+# Test Classification
 
 ## Run
 - download the [repository](https://github.com/AlessandroSoci/Naive-Bayes-vs-Decision-Tree/archive/master.zip) (clone or zip download)
