@@ -4,8 +4,7 @@ import pandas as pd
 from texttable import Texttable
 
 from sklearn.naive_bayes import GaussianNB, MultinomialNB
-from sklearn.model_selection import ShuffleSplit
-from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import cross_val_score, KFold
 from sklearn import preprocessing
 from sklearn.preprocessing import Imputer
 from sklearn import tree
@@ -16,7 +15,7 @@ def GNBFunction(x, y, cvnb):
     model = GaussianNB()
     score_nb = cross_val_score(model, x, y.ravel(), cv=cvnb)
     mean = score_nb.mean() * 100
-    std = score_nb.std() * 100
+    std = score_nb.std() * 100 / 2
     accuracy = "%0.2f (+/- %0.2f)" % (mean, std)
     return accuracy, mean
 
@@ -24,7 +23,7 @@ def MNBFunction(x, y, cvnb):
     model = MultinomialNB()
     score_nb = cross_val_score(model, x, y.ravel(), cv=cvnb)
     mean = score_nb.mean() * 100
-    std = score_nb.std() * 100
+    std = score_nb.std() * 100 / 2
     accuracy = "%0.2f (+/- %0.2f)" % (mean, std)
     return accuracy, mean
 
@@ -32,7 +31,7 @@ def TreeFunction(x, y, cvt):
     dtree = tree.DecisionTreeClassifier()
     score_tree = cross_val_score(dtree, x, y.ravel(), cv=cvt)
     mean = score_tree.mean() * 100
-    std = score_tree.std() * 100
+    std = score_tree.std() * 100 / 2
     accuracy = "%0.2f (+/- %0.2f)" % (mean, std)
     return accuracy, mean
 
@@ -47,7 +46,7 @@ sdf = ["Iris", "Echocardiogram", "Mushroom", "Breats", "Credit", "Pima", "Hepati
 
 # np.set_printoptions(threshold=np.nan)
 imp = Imputer(missing_values='NaN', strategy='mean', axis=0)
-cv = ShuffleSplit(n_splits=10, test_size=0.1, random_state=8)
+cv = KFold(n_splits=10, random_state=8)
 min_max_scaler = preprocessing.MinMaxScaler()
 
 # --------------------- Iris -------------------------
@@ -107,7 +106,6 @@ Y_credit = D_credit[:, -2]
 # ---------------------- Pima ------------------------
 dataset_pima = pd.read_csv('Dataset/Pima.csv')
 values_tmp = dataset_pima.values
-min_max_scaler = preprocessing.MinMaxScaler()
 norm = min_max_scaler.fit_transform(values_tmp)
 dataset_pima = pd.DataFrame(norm)
 dataset_pima.columns = ['f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'label']
